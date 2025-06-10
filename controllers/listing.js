@@ -2,11 +2,11 @@ const Listing = require("../models/listing.js");
 
 module.exports.index = async ( req, res ) => {
 const  allListings = await Listing.find({});
-res.render("C:\\Users\\ONKAR\\OneDrive\\Wanderlust_Hub_Project\\views\\listings\\index.ejs", {allListings});
+res.render("listings/index.ejs", {allListings});
 }
 
 module.exports.renderNewForm = (req, res ) => {
-  res.render("C:\\Users\\ONKAR\\OneDrive\\Wanderlust_Hub_Project\\views\\listings\\new.ejs");
+  res.render("listings/new.ejs");
 };
 
 module.exports.showForm = async ( req, res ) => { 
@@ -16,7 +16,7 @@ module.exports.showForm = async ( req, res ) => {
     req.flash("error", "The listing you are trying to visit doesn't exist");
     res.redirect("/listings");
  }
-res.render("C:\\Users\\ONKAR\\OneDrive\\Wanderlust_Hub_Project\\views\\listings\\show.ejs" ,{ listing } )
+res.render("listings/show.ejs" ,{ listing } )
 };
 
 module.exports.createNewListing = async ( req, res) => {
@@ -39,7 +39,7 @@ module.exports.editListing = async ( req, res) => {
  }
    let originalImage = listing.image.url;
    originalImage = originalImage.replace("/upload", "/upload/h_250,w_250")
-    res.render("C:\\Users\\ONKAR\\OneDrive\\Wanderlust_Hub_Project\\views\\listings\\edit.ejs" , { listing, originalImage });
+    res.render("listings/edit.ejs" , { listing, originalImage });
 };
 
 module.exports.updateListing = async (req, res ) => {
