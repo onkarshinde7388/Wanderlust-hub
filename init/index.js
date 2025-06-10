@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const initData = require("./data.js");
-const Listing = require("C:\\Users\\ONKAR\\OneDrive\\Wanderlust Hub Project\\models\\listing.js");
+const Listing = require("C:\\Users\\ONKAR\\OneDrive\\Wanderlust_Hub_Project\\models\\listing.js");
 
 const Mongo_Url = "mongodb://127.0.0.1:27017/wanderlust";
 
